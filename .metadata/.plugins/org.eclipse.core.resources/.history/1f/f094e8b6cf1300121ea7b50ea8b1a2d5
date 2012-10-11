@@ -1,0 +1,55 @@
+
+public class Lab_1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		SalariedEmployee emp1 = new SalariedEmployee(0, "Testy McTesterson", 
+				                                     new Date("May", 3, 1988),
+				                                     200000, 3);
+		
+		emp1.print();
+
+		
+		HourlyEmployee emp2 = new HourlyEmployee(1, "Johnny Cash",
+				                                 new Date("January", 1, 1962),
+				                                 42, 999);
+		
+		emp2.print();
+		
+		FullTimeHourlyEmployee emp3 = new FullTimeHourlyEmployee(2, "Ira Glass",
+				                                                 new Date("February", 19, 1995),
+				                                                 100, 3);
+		
+		emp3.print();
+		
+		PartTimeHourlyEmployee emp4 = new PartTimeHourlyEmployee(3, "Fred Flintstone",
+				                                                 new Date("March", 10, 1900),
+				                                                 1, 10,
+				                                                 new Date("March", 11, 1901));
+		
+		emp4.print();
+		
+		Executive emp5 = new Executive(4, "Steve Jobs", new Date("April",15, 1980), 1000000);
+		
+		emp5.print();
+		
+		TechnicalStaff emp6 = new TechnicalStaff(5, "Thrall TheWarchief", new Date("November", 25, 2005), 1, 5);
+		
+		emp6.print();
+		
+		Engineer emp7 = new Engineer(6, "Engi", new Date("January", 1, 1999), 1,3);
+		Technician emp8 = new Technician(7, "Techy", new Date("January", 1, 1999), 1, 3);
+		ClericalStaff emp9 = new ClericalStaff(7, "Your Mom", new Date("January", 1, 1999), 1, 3);
+		
+		emp7.print();
+		emp8.print();
+		emp9.print();
+		
+		if(emp8.equals(emp9)){
+			System.out.println("Equal!");
+		}
+	}
+
+}
