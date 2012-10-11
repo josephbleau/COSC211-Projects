@@ -1,0 +1,11 @@
+public class HourlyEmployee extends Employee{
+	private double hourlyRate;
+	private int maxHours;
+	
+	HourlyEmployee(int id, String name, Date date, double hourly_rate, int max_hours)
+	{
+		super(id, name, date);
+		this.hourlyRate = hourly_rate;
+		this.maxHours = max_hours;
+	}
+}

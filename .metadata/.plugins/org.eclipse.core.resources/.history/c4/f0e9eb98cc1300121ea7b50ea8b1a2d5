@@ -1,0 +1,12 @@
+
+public class Engineer extends TechnicalStaff{
+	Engineer(int id, String name, Date date, double salary, int rank)
+	{
+		TechnicalStaff(id, name, date, salary, rank);
+	}
+	
+	public void print()
+	{
+		super.print();
+	}
+}

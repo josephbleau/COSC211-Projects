@@ -1,0 +1,22 @@
+
+public class Lab_1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		SalariedEmployee emp1 = new SalariedEmployee(0, "Testy McTesterson", 
+				                                     new Date("May", 3, 1988),
+				                                     200000, 3);
+		
+		emp1.print();
+
+		
+		HourlyEmployee emp2 = new HourlyEmployee(1, "Johnny Cash",
+				                                 new Date("January", 1, 1932),
+				                                 42, 999);
+		
+		emp2.print();
+	}
+
+}

@@ -1,0 +1,30 @@
+
+public class SalariedEmployee extends Employee {
+	private double salary;
+	private int rank;
+	
+	SalariedEmployee(int id, String name, Date date, double salary, int rank)
+	{
+		
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public int getRank() {
+		return rank;
+	}
+
+	public void setRank(int rank) {
+		if(rank < 3 || rank > 6)
+		{
+			System.out.println("Error can't be set to a value less than 3 or greater than 6.");
+		}
+		this.rank = rank;
+	}
+}

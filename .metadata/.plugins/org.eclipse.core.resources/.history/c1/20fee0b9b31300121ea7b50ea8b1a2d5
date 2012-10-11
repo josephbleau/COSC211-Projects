@@ -1,0 +1,41 @@
+
+public class SalariedEmployee extends Employee {
+	private double salary;
+	private int rank;
+	
+	SalariedEmployee(int id, String name, Date date, double salary, int rank)
+	{
+		super(id,name,date);
+		this.salary = salary;
+		if(rank < 3 || rank > 6)
+		{
+			System.out.println("Salaried Employee rank must be between 3 and 6, set to 3 by default");
+		}
+		else
+		{
+			
+		}
+	}
+
+	public double getSalary() {
+		return salary;
+	}
+
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+
+	public int getRank() {
+		return rank;
+	}
+
+	public void setRank(int rank) {
+		if(rank < 3 || rank > 6)
+		{
+			System.out.println("Salaried Employee rank cannot be set to a value less than 3 or greater than 6.");
+			return;
+		}
+		
+		this.rank = rank;
+	}
+}

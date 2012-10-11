@@ -1,0 +1,35 @@
+
+public class Lab_1 {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		SalariedEmployee emp1 = new SalariedEmployee(0, "Testy McTesterson", 
+				                                     new Date("May", 3, 1988),
+				                                     200000, 3);
+		
+		emp1.print();
+
+		
+		HourlyEmployee emp2 = new HourlyEmployee(1, "Johnny Cash",
+				                                 new Date("January", 1, 1932),
+				                                 42, 999);
+		
+		emp2.print();
+		
+		FullTimeHourlyEmployee emp3 = new FullTimeHourlyEmployee(2, "Ira Glass",
+				                                                 new Date("February", 19, 1971),
+				                                                 100, 3);
+		
+		emp3.print();
+		
+		PartTimeHourlyEmployee emp4 = new PartTimeHourlyEmployee(3, "Fred Flintston",
+				                                                 new Date("March", 10, 200),
+				                                                 1, 10,
+				                                                 new Date("March", 11, 200));
+		
+		emp4.print();
+	}
+
+}
