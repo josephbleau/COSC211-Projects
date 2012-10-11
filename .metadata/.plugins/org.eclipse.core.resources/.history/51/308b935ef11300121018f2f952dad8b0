@@ -1,0 +1,14 @@
+
+public class Lab_5 {
+
+	public int factorial(int n)
+	{
+		
+	}
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

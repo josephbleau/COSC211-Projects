@@ -1,0 +1,52 @@
+
+public class Lab_5 {
+
+	public static int factorial(int n)
+	{
+		if(n==0)
+			return 1;
+		
+		return n * factorial(n-1);
+	}
+	
+	public static void printStars(int n)
+	{
+		if(n==0)
+			return;
+		
+		printStars(n-1);
+		
+		for(int i = 0; i < n; i++)
+			System.out.print("*");
+		
+		System.out.println();
+	}
+	
+	public static int gcd(int a, int b, int t)
+	{
+		if(a % t == 0 && b % t == 0)
+			return t;
+		else
+			return gcd(a,b,t-1);
+	}
+	
+	public static int gcd(int a, int b)
+	{
+		return gcd(a,b,b);
+	}
+	
+	public static void printRecursiveDirectoryList(String path)
+	{
+		
+	}
+	
+	public static void main(String[] args) {
+		System.out.println("The factorial of 10 is: " + factorial(10));
+
+		System.out.println("Printing a 5-tall star triangle.");
+		printStars(5);
+		
+		System.out.println("The greatest common divisor of 50 and 20 is: " + gcd(50,20));
+	}
+
+}
