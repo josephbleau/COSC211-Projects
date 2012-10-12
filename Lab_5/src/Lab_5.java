@@ -33,7 +33,7 @@ public class Lab_5 {
 	
 	public static int gcd(int a, int b)
 	{
-		return gcd(a,b,b);
+		return gcd(a,b,((a<=b)?a:b));
 	}
 	
 	public static void printRecursiveDirectoryList(String path)
