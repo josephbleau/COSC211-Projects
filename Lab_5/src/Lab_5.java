@@ -1,6 +1,4 @@
 import java.io.File;
-import java.io.IOException;
-import java.nio.file.Path;
 
 public class Lab_5 {
 
@@ -49,18 +47,24 @@ public class Lab_5 {
 		}
 		
 		System.out.println(path);
-		for(int i = 0; i < directory.listFiles().length; i++)
+		
+		File[] fileList = directory.listFiles();
+		for(int i = 0; i < fileList.length; i++)
 		{
+			String currentFileAsString = fileList[i].toString();
+			
 			// Ignore relative path files.
-			if(directory.listFiles()[i].isDirectory()){
-				if(directory.listFiles()[i].toString() == "." || 
-				   directory.listFiles()[i].toString() == "..")
+			if(fileList[i].isDirectory()){
+				if(currentFileAsString == "." || 
+				   currentFileAsString== ".."){
 					return;
+				}
 				
-				printRecursiveDirectoryList(directory.listFiles()[i].toString());
-			} else
+				printRecursiveDirectoryList(currentFileAsString);
+			} 
+			else
 			{
-				System.out.println(directory.listFiles()[i].toString());
+				System.out.println(currentFileAsString);
 			}
 		}
 	}
@@ -81,7 +85,7 @@ public class Lab_5 {
 		
 		System.out.println("The greatest common divisor of 50 and 20 is: " + gcd(50,20));
 		
-		printRecursiveDirectoryList("/home/jbleau/Dev/");
+		printRecursiveDirectoryList("/home/joseph/Dev/");
 	}
 
 }
