@@ -48,12 +48,13 @@ public class Lab_5 {
 		
 		System.out.println(path);
 		
-		for(File folderItem : directory.listFiles())
+		File[] fileList = directory.listFiles();
+		for(int i = 0; i < fileList.length; i++)
 		{
-			String currentFileAsString = folderItem.toString();
+			String currentFileAsString = fileList[i].toString();
 			
 			// Ignore relative path files.
-			if(folderItem.isDirectory()){
+			if(fileList[i].isDirectory()){
 				if(currentFileAsString == "." || 
 				   currentFileAsString== ".."){
 					return;
@@ -84,7 +85,7 @@ public class Lab_5 {
 		
 		System.out.println("The greatest common divisor of 50 and 20 is: " + gcd(50,20));
 		
-		printRecursiveDirectoryList("/home/jbleau/Dev/");
+		printRecursiveDirectoryList("/home/joseph/Dev/");
 	}
 
 }

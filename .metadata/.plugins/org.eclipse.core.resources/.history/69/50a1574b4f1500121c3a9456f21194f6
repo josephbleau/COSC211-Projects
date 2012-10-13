@@ -84,7 +84,7 @@ public class Lab_5 {
 		
 		System.out.println("The greatest common divisor of 50 and 20 is: " + gcd(50,20));
 		
-		printRecursiveDirectoryList("/home/jbleau/Dev/");
+		printRecursiveDirectoryList("/home/joseph/Dev/");
 	}
 
 }
