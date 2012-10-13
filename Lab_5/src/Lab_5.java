@@ -1,4 +1,6 @@
 import java.io.File;
+import java.lang.reflect.Array;
+import java.util.Set;
 
 public class Lab_5 {
 
@@ -34,6 +36,28 @@ public class Lab_5 {
 	public static int gcd(int a, int b)
 	{
 		return gcd(a,b,((a<=b)?a:b));
+	}
+	
+	public static <T extends Comparable<T>> int binarySearch(T haystack[], T needle, int front, int back)
+	{
+		int midpoint = (back + front) / 2;
+		
+		if(front >= back || midpoint >= haystack.length-1)
+			return -1;
+		if(haystack[midpoint].equals(needle))
+			return midpoint;
+		else
+		{
+			if(haystack[midpoint].compareTo(needle) > 0)
+				return binarySearch(haystack, needle, 0, midpoint);
+			else 
+				return binarySearch(haystack, needle, midpoint, haystack.length);
+		}
+	}
+	
+	public static <T extends Comparable<T>> int binarySearch(T haystack[], T needle)
+	{
+		return binarySearch(haystack, needle, 0, haystack.length);
 	}
 	
 	public static void printRecursiveDirectoryList(String path)
@@ -83,6 +107,10 @@ public class Lab_5 {
 		printStars(5);
 		
 		System.out.println("The greatest common divisor of 50 and 20 is: " + gcd(50,20));
+		
+		Integer intArray[] = {1,2,3,4,5,6,7};
+		System.out.println("Element '8' is located at index '" + binarySearch(intArray,8) + "'");
+		System.out.println("Element '3' is located at index '" + binarySearch(intArray,3) + "'");
 		
 		printRecursiveDirectoryList("/home/jbleau/Dev/");
 	}
