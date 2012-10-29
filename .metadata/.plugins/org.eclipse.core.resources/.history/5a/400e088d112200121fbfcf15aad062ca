@@ -1,0 +1,22 @@
+import java.util.ArrayList;
+
+public class Main {
+
+	public static ArrayList<Double> compInt(double b, double r, int t)
+	{
+		ArrayList<Double> results = new ArrayList<Double>();
+		
+		for(int i = 0; i < t; i++)
+		{
+			b *=  1 * r;
+			results.add(b);
+		}
+		
+		return results;
+	}
+	
+	public static void main(String[] args) {
+	
+	}
+
+}
