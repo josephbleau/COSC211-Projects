@@ -1,0 +1,15 @@
+import java.io.InputStreamReader;
+
+
+public class Main {
+	public static void main(String[] args) {
+		InputStreamReader in = new InputStreamReader(System.in);
+		while(true) {
+			System.out.println("1. Add a value to the front of the list.");
+			System.out.println("2. Remove a value from the end of the list.");
+			System.out.println("2. Print the size of the list.");
+			System.out.println("4. Print the contents of the list.");
+			System.out.println("5. Clear the list. ");
+		}
+	}
+}

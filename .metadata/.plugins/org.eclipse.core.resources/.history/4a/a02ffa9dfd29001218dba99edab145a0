@@ -1,0 +1,77 @@
+
+public class LinkedList {
+	private Node head;
+	private int count;
+	
+	public LinkedList(){
+		count = 0;
+		head = null;
+	}
+	
+	/* Insert a node into the beginning of the list. */
+	public void insert(Node n){
+		if(head == null){
+			head = n;
+			return;
+		}
+		else {
+			n.setNext(head);
+			head = n;			
+		}
+		
+		count++;
+	}
+	
+	/* Remove a node from the end of the list */
+	public void pop() {
+		/* In the case of an empty list, just return. */
+		if(head == null) {
+			return;
+		}
+		
+		/* In the case of a list of size one, set head to null and return. */
+		if(head.getNext() == null)
+		{
+			head = null;
+			count = 0;
+			return;
+		}
+		
+		/* In the case that there is more than one node in the list, find the
+		 * node to have no next node, this is the node we need to remove, by setting
+		 * its previous nodes next node to null.
+		 */
+		Node last = head;
+		Node next = head.getNext();
+		
+		while(next.getNext() != null){
+			last.setNext(next);
+			next.setNext(next.getNext());
+		}
+		
+		last.setNext(null);
+		count--;
+	}
+	
+	public int getCount()
+	{
+		return count;
+	}
+	
+	public void printCount(){ 
+		System.out.print(count);
+	}
+	
+	public void printContents(){
+		Node p = head;
+		while(p != null){
+			System.out.println(head.getData());
+			p = p.getNext();
+		}
+	}
+	
+	public void clear(){
+		head = null;
+		count = 0;
+	}
+}
