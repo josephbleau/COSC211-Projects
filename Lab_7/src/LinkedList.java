@@ -21,7 +21,7 @@ public class LinkedList {
 		count++;
 	}
 	
-	/* Remove a node from the end of the list */
+	/* Remove a node from the beginning of the list */
 	public void pop() {
 		
 		/* In the case of an empty list, just return. */
