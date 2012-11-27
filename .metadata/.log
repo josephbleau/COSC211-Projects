@@ -219,3 +219,16 @@ Caused by: java.util.NoSuchElementException
 	at java.util.StringTokenizer.nextToken(StringTokenizer.java:349)
 	at org.osgi.framework.Version.<init>(Version.java:127)
 	... 13 more
+!SESSION 2012-11-27 13:05:13.342 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_09
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=en_US
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.core.resources 2 10035 2012-11-27 13:05:24.259
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.m2e.logback.appender 4 0 2012-11-27 13:14:13.360
+!MESSAGE Failed to open search index.
