@@ -4,7 +4,6 @@ public class LinkedList<T> {
 	private int count;
 	
 	public LinkedList(){
-		count = 0;
 		head = null;
 	}
 	
@@ -12,46 +11,65 @@ public class LinkedList<T> {
 	public void insert(Node<T> n){
 		if(head == null){
 			head = n;
+			n.setPrev(null);
+			n.setNext(null);
 		}
 		else {
 			n.setNext(head);
-			head = n;			
+			head.setPrev(n);
+			head = n;		
+			n.setPrev(null);	
 		}
 		
 		count++;
 	}
 	
 	public void insertAt(Node<T> node, int loc) {
-		if(loc  == 0){ head = node; return; }
+		if(loc  == 0){ 
+			if(head != null) 
+				node.setNext(head);
+			node.setPrev(null);
+			head = node; 
+			count++;
+			return; 
+		}
 		
 		Node<T> ptr = head;
 		for(int i = 1; i < loc; i++) {
-			if(ptr.getNext() != null){ ptr.setNext(ptr.getNext()); } 
-			else { return; }
+			if(ptr.getNext() != null){ ptr = ptr.getNext(); }
 		}
 		
+		node.setNext(ptr.getNext());
+		node.setPrev(ptr);
 		ptr.setNext(node);
+
+		count++;
 	}
 	
 	public void removeAt(int loc) {
-		Node<T> ptr = head;
-		
-		for(int i = 0; i < loc; i++) {
-			if(ptr.getNext() != null) { ptr.setNext(ptr.getNext());}
-			else { return; }
-		}
-		
-		if(head == ptr && ptr.getNext() != null) {
-			head = ptr.getNext();
+		if( loc < 0 || loc >= count)
 			return;
+		else {
+			count--;
+			
+			if(loc == 0) {
+				if(head.getNext() != null) {
+					head = head.getNext();
+					head.setPrev(null);
+				}
+			} else {
+				Node<T> ptr = head;
+				
+				for(int i = 0; i < loc; i++) {
+					if(ptr.getNext() != null) ptr = ptr.getNext();
+				}
+				
+				if(ptr.getPrev() != null)
+					ptr.getPrev().setNext(ptr.getNext());
+				if(ptr.getNext() != null)
+					ptr.getNext().setPrev(ptr.getPrev());
+			}
 		}
-		
-		if(ptr.getPrev() != null)
-			ptr.getPrev().setNext(ptr.getNext());
-		if(ptr.getNext() != null)
-			ptr.getNext().setPrev(ptr.getPrev());
-		
-		return;
 	}
 	
 	/* Remove a node from the beginning of the list */

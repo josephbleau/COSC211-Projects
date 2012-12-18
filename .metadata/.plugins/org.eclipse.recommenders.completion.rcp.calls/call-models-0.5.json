@@ -1,12 +1,18 @@
 {
   "C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar": {
+    "coordinate": "jre:jre:zip:call:1.0.0",
     "location": "C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar",
-    "status": "UNRESOLVED",
+    "status": "RESOLVED",
     "error": "No class path info available for \u0027C:\\Program Files (x86)\\Java\\jre7\\lib\\rt.jar\u0027. Skipped."
   },
   "C:\\Users\\Joey\\Documents\\Eclipse\\COSC211-Projects\\Lab_7_2\\src": {
     "location": "C:\\Users\\Joey\\Documents\\Eclipse\\COSC211-Projects\\Lab_7_2\\src",
     "status": "UNRESOLVED",
     "error": "No class path info available for \u0027C:\\Users\\Joey\\Documents\\Eclipse\\COSC211-Projects\\Lab_7_2\\src\u0027. Skipped."
+  },
+  "C:\\Users\\Joey\\Documents\\Development\\COSC211-Projects\\Lab_7_2\\src": {
+    "location": "C:\\Users\\Joey\\Documents\\Development\\COSC211-Projects\\Lab_7_2\\src",
+    "status": "UNRESOLVED",
+    "error": "No class path info available for \u0027C:\\Users\\Joey\\Documents\\Development\\COSC211-Projects\\Lab_7_2\\src\u0027. Skipped."
   }
 }

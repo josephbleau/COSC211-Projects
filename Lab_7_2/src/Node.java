@@ -14,17 +14,13 @@ public class Node<T> {
 	}
 	
 	public T getData() { return data; }
+	public void setData(T data) { this.data = data; }
 	
 	public Node<T> getNext() { return next; }
 	public Node<T> getPrev() { return prev; }
 	
-	public void setName(T name) { this.data = name; }
-	
 	public void setNext(Node<T> next) {this.next = next; }
-	public void setPrev(Node<T> prev) {this.prev = prev;
+	public void setPrev(Node<T> prev) {this.prev = prev;}
 	
-	}
-	public String toString() {
-		return data.toString();
-	}
+	public String toString() { return data.toString(); }
 }
